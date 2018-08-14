@@ -1,0 +1,33 @@
+#python3
+n = int(input())
+numbers = [int(x) for x in input().split()]
+assert(len(numbers) == n)
+max_num = float('-inf')
+second_max_num = float('-inf')
+
+for num in numbers:
+    if num > max_num:
+        second_max_num = max_num
+        max_num = num
+
+    if num > second_max_num and num != max_num:
+        second_max_num = num
+
+#min_num = max_num
+#second_min_num = max_num
+
+#for num in numbers:
+#    if num < min_num:
+#        second_min_num = min_num
+#        min_num = num
+
+#    if num < second_min_num and num != min_num:
+#        second_min_num = num
+
+print(second_max_num * max_num)
+
+
+
+
+
+
